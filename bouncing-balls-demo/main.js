@@ -53,3 +53,50 @@ Ball.prototype.update = function() {
   this.x += this.velX
   this.y += this.velY
 }
+
+Ball.prototype.collisonDetect = function(){
+   for (let j = 0; j < balls.length; j++) {
+    if (!(this === balls[j])) {
+      const dx = this.x - balls[j].x
+      const dy = this.y - balls[j].y
+      const distance = Math.sqrt(dx * dx + dy * dy)
+
+      // if collison this statement runs common algorithm to check collision of 2 circles https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection#circle_collision
+      if (distance < this.size + balls[j].size) {
+        balls[j].colour = this.colour = 'rgb(' + randomNum(0, 255) + ',' + randomNum(0, 255) + ',' + randomNum(0, 255) + ')'
+      }
+     }     
+   }
+}
+
+let balls = []
+
+while (balls.length < 15){
+  let size = randomNum(10, 20)
+  let ball = new Ball(
+    randomNum(0 + size, width - size),
+    randomNum(0 + size, height - size),
+    randomNum(-7, 7),
+    randomNum(-7, 7),
+    'rgb(' + randomNum(0, 255) + ',' + randomNum(0, 255) + ',' + randomNum(0, 255) +')',
+    size
+  )
+
+  balls.push(ball)
+}
+
+function loop() {
+  // semi transparency
+  context.fillStyle = 'rgba(0, 0, 0, 0.25)'
+  context.fillRect(0, 0, width, height)
+
+  for (let i = 0; i < balls.length; i++) {
+    balls[i].draw()
+    balls[i].update()
+    balls[i].collisonDetect()
+  }
+
+  requestAnimationFrame(loop)
+}
+
+loop()
