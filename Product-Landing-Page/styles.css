@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
+
+:root {
+  --base-fontSize: 16px;
+  --colour-blue: #0000cc;
+  --colour-red: #cc0000;
+  --colour-white: #ffffff;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+}
+
+h1,
+h2 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.order-now {
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  background-color: var(--colour-blue);
+  border: var(--colour-blue) 1px solid;
+  border-radius: 1rem;
+  color: var(--colour-white);
+  padding: 0.5rem 0;
+  width: 10rem;
+}
+
+button a {
+  color: var(--colour-white);
+  text-decoration: none;
+}
