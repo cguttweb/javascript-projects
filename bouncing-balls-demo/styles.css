@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  background-color: transparent;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  left: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1 {
+    color: #000;
+    text-shadow: 5px 0 5px red;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  h1 {
+    color: #fff;
+    text-shadow: 5px 0 5px black;
+  }
+}
