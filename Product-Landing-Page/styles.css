@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
 
 :root {
-  --base-fontSize: 16px;
+  font-size: 16px;
   --colour-blue: #0000cc;
   --colour-red: #cc0000;
   --colour-white: #ffffff;
@@ -18,27 +18,43 @@ h2 {
   text-align: center;
 }
 
-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
+h1 {
+  font-size: 38px;
 }
 
-.order-now {
+h2 {
+  font-size: 24px;
+}
+
+section,
+footer {
   align-items: center;
+  display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
 button {
   background-color: var(--colour-blue);
   border: var(--colour-blue) 1px solid;
-  border-radius: 1rem;
   color: var(--colour-white);
-  padding: 0.5rem 0;
-  width: 10rem;
+  padding: 1rem 0;
+  width: 90%;
 }
 
 button a {
   color: var(--colour-white);
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .order-now {
+    align-items: center;
+    flex-direction: column;
+  }
 }
