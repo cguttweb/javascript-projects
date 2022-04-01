@@ -17,6 +17,12 @@ function validateInput() {
   }
 }
 
+function clearValues() {
+  let username = ''
+  let password = ''
+  alert('test')
+}
+
 loginBtn.addEventListener('click', e => {
   e.preventDefault()
   validateInput()
@@ -24,4 +30,5 @@ loginBtn.addEventListener('click', e => {
 
 cancelBtn.addEventListener('click', e => {
   e.preventDefault()
+  clearValues()
 })

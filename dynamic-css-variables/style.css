@@ -36,6 +36,7 @@ button {
 
 .login {
   background-color: var(--color-blue);
+  color: white;
 }
 
 .cancel {
