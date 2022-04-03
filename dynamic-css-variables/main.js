@@ -6,21 +6,20 @@ const cancelBtn = document.getElementById('cancel')
 let username = document.getElementById('username').value
 let password = document.getElementById('password').value
 
-let errorMessage = document.querySelector('.message')
+let usernameError = document.querySelector('.error-username')
+let passwordError = document.querySelector('.error-password')
+let userInput = document.querySelector('#username')
+let passwordInput = document.querySelector('#password')
 
 function validateInput() {
   if (username !== 'testuser') {
-    console.log('username does not match')
+    usernameError.innerHTML = `Username does not match`
+    userInput.style.backgroundColor = `rgba(204, 0, 0, 0.5)`
   }
   if (password !== 'mypassword') {
-    console.log('password does not match')
+    passwordError.innerHTML = `Password does not match`
+    passwordInput.style.backgroundColor = `rgba(204, 0, 0, 0.5)`
   }
-}
-
-function clearValues() {
-  let username = ''
-  let password = ''
-  alert('test')
 }
 
 loginBtn.addEventListener('click', e => {
@@ -30,5 +29,4 @@ loginBtn.addEventListener('click', e => {
 
 cancelBtn.addEventListener('click', e => {
   e.preventDefault()
-  clearValues()
 })

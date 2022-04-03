@@ -23,7 +23,7 @@ label {
 
 input {
   border: 1px solid var(--light-grey);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
 }
 
@@ -43,8 +43,9 @@ button {
   background-color: var(--color-red);
 }
 
-.error {
+[class^='error'] {
   color: var(--color-red);
+  padding-bottom: 0.5rem;
 }
 
 .error-border {
