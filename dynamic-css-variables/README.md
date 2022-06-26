@@ -29,9 +29,9 @@ changing them from within the app.
 - [ ] User can see a warning message if one or both of the text boxes contains
       spaces and the background color of the empty text box will change to light
       yellow.
-- [x] User can see a warning message if the user id doesn't match 'testuser'
+- [ ] User can see a warning message if the user id doesn't match 'testuser'
       and the background color of the text box will change to light red.
-- [x] User can see a warning message if the password doesn't match 'mypassword'
+- [ ] User can see a warning message if the password doesn't match 'mypassword'
       and the background color of the text box will change to light red.
 - [ ] User can click the 'Cancel' button to clear the text boxes and reset
       their background colors to white.
